@@ -10,13 +10,13 @@ Sarah Hilton*, John Huddleston*, Allison Black, Khrystyna North, Adam Dingens, T
 \section{Summary and Purpose}
 
 One challenge in studying proteins is that the effect of amino-acid changes are idiosyncratic across the length of the gene.
-However, recent technological developments in the form of a high-throughput functional assay called Deep Mutational Scanning (DMS), make it possible to experimentally measure the effect of all amino-acid mutations to a protein.
-Over the past five years, this flexible assay has been used to study dozens of different proteins and answer a variety of research questions.
-For example, DMS approaches have been used for protein engineering, understanding the human immune response to viruses, and to interpret human variation in a clinical setting.
-Accompanying this explosion in DMS studies has been the development of software tools and databases to standardize DMS analysis and facilitate data sharing.
+However, recent technological developments in the form of a high-throughput functional assay called Deep Mutational Scanning (DMS)~\cite{fowler2014deep}, make it possible to experimentally measure the effect of all amino-acid mutations to a protein.
+Over the past five years, this flexible assay has been used to study dozens of different proteins~\cite{esposito2019mavedb} and answer a variety of research questions.
+For example, DMS approaches have been used for protein engineering~\cite{wrenbeck2017deep}, understanding the human immune response to viruses~\cite{lee2019mapping}, and to potentially interpret human variation in a clinical setting\cite{starita2017variant, gelman2019recommendations}.
+Accompanying this explosion in DMS studies has been the development of software tools~\cite{bloom2015software,rubin2017statistical} and databases~\cite{esposito2019mavedb} to standardize DMS analysis and facilitate data sharing.
 However, the power of a DMS study is only fully leveraged when the experimental results are summarized, integrated, and visualized with other data, such the 3d protein structure and natural sequence data.
 
-Here we describe \texttt{dms-view} (\url{https://dms-view.github.io/}), a flexible, web-based, interactive visualization tool for deep mutational scanning experiments written in JavaScript and D3.
+Here we describe \texttt{dms-view} (\url{https://dms-view.github.io/}), a flexible, web-based, interactive visualization tool for deep mutational scanning experiments written in JavaScript and D3 (\url{https://d3js.org}).
 \texttt{dms-view} links site-level and mutation-level results from a DMS to a 3D protein structure.
 The user can interactively select sites of interest to reveal the mutation-level details and view the sites on the protein structure.
 \texttt{dms-view} tracks both the input data information and the user selections in the URL.
@@ -25,16 +25,16 @@ Importantly, \texttt{dms-view} is designed with a flexible input data file so th
 
 \section{How to use \texttt{dms-view}}
 
-\texttt{dms-view} is a web-based visualization tool hosted by GitHub pages.
+\texttt{dms-view} is a web-based visualization tool hosted by GitHub Pages(\url{https://pages.github.com/}).
 In this section, we will briefly explain how \texttt{dms-view} is laid out, the interaction tools available to the user and how to format and upload a new dataset.
 For more information on any of these topics, please see the documentation at \url{https://dms-view.github.io/docs}.
 
 \subsection{\texttt{dms-view} layout}
 
 Users can access \texttt{dms-view} at \url{https://dms-view.github.io}.
-The tool is broken into a data section at the top and a metadata section at the bottom.
+The tool is broken into a data section at the top and a metadata section at the bottom (Fig~\ref{fig:layout}A).
 
-The data section displays the user specified data (see data upload section below) in three panels: the site dot plot panel, the mutation logoplot panel, and the protein structure panel.
+The data section displays the user specified data (see data upload section below) in three panels: the site dot plot panel, the mutation logoplot panel, and the protein structure panelFig~\ref{fig:layout}B.
 When sites are selected in the site dot plot panel, the individual mutation values are shown in the mutation logoplot panel below and highlighted on the protein structure to the right.
 
 The metadata section is at the bottom of the page.
@@ -100,8 +100,8 @@ Below are examples of two different published datasets analyzed using \texttt{dm
 
 \subsection{Mapping Influenza Virus escape from human sera}
 
-Using a deep mutational scanning approach, Lee \textit{et al.}, 2019 measured the ability of every single amino-acid mutation in the Influenza Virus surface protein hemagglutinin to escape the sera of both humans and infected ferrets.
-For more information on the experimental setup, see the paper or the GitHub repo.
+Using a deep mutational scanning approach, Lee \textit{et al.}, 2019~\cite{lee2019mapping} measured the ability of every single amino-acid mutation in the Influenza Virus surface protein hemagglutinin to escape the sera of both humans and infected ferrets.
+For more information on the experimental setup, see the paper~\cite{lee2019mapping} or the GitHub repo(\url{https://github.com/jbloomlab/map_flu_serum_Perth2009_H3_HA}).
 
 In this example, the conditions are the different human or ferret sera used for the selections.
 The site- and mutation-level metrics are different summaries of \textit{differential selection}(\url{https://jbloomlab.github.io/dms_tools2/diffsel.html}), where higher values indicate more escape from the sera.
@@ -115,18 +115,18 @@ Lee and colleagues asked two questions in their paper which can be easily explor
 
 \subsubsection{Comparing site-level and mutation-level metric values for specific sites between conditions}
 
-To address this question using \texttt{dms-view}, we selected the mostly highly targted sites (x, y, z) for the human sera condition ``Age 21 2010".
+To address this question using \texttt{dms-view}, we selected the mostly highly targted sites (144, 159, 193, and 222) for the human sera condition ``Age 21 2010" (Fig~\ref{fig:human-vs-ferrets}A).
 We can then use the condition dropdown menu to toggle between the other human and ferret sera.
 Since the highlighted sites remain after the condition is changed, we can easily see if the same sites are highly targeted in different samples.
 
-In Fig XX, we can see that XX of the sites selected by the human sera ``Age 21 2010" are also targeted by the ferret sera XX.
+In Fig~\ref{fig:human-vs-ferrets}B, we can see that 2 of the sites selected by the human sera ``Age 21 2010" are also targeted by the ferret sera 2.
 To explore this question in more detail, please see the \texttt{dms-view} link XX.
 
 \subsubsection{Where on the protein structure are the highly selected sites located?}
 
-To address this question using \texttt{dms-view}, we selected the most highly targeted sites (x,y,z) for the human sera condition ``Age 21 2010" to highlight them on the protein structure.
+To address this question using \texttt{dms-view}, we selected the most highly targeted sites (144, 159, 193, and 222) for the human sera condition ``Age 21 2010" to highlight them on the protein structure.
 
-In Fig XX, we can see that these sites cluster on the ``head" of the hemagglutinin, which is known to be a common target of the human immune system.
+In Fig~\ref{fig:human-vs-ferrets}A, we can see that these sites cluster on the ``head" of the hemagglutinin (cite x), which is known to be a common target of the human immune system.
 
 \subsection{maybe **gasp** a non-Bloom lab dataset?}
 
@@ -147,3 +147,28 @@ All of the code, docs, and example data are hosted on GitHub.
 
 This work started as the final project for UW class CSE 512 Data Visualization as a part of the UW eScience Advanced Data Science Option curriculum and we would like to thank Dr. Jeffrey Heer, Halden Lin, and Jane Hoffswell for their input on the initial design.
 Thank you to Bloom and Bedford lab members for their generosity providing feedback, data, and time for testing.
+
+% ========== Figures
+
+\newpage
+\begin{figure}[h!]
+\centerline{\includegraphics[width=0.90\textwidth]{../fig/layout.png}}
+\caption[\texttt{dms-view} layout]{
+\label{fig:layout}
+\textbf{Main sections and features of the \texttt{dms-view} tool.}
+{\bf (A)} \texttt{dms-view} is broken into a data section with the interactive plots at the top and a metadata section for notes and description at the bottom.
+{\bf (B)} The \texttt{dms-view} data section has three panels: the site dot plot panel, the mutation logoplot panel, and the protein structure panel.
+The interactive features for selecting sites and navigating are in the site dot plot panel.
+}
+\end{figure}
+
+\newpage
+\begin{figure}[h!]
+\centerline{\includegraphics[width=0.90\textwidth]{../fig/human-vs-ferret.png}}
+\caption[Comparing sites targeted by human sera to sites targeted by ferret sera.]{
+\label{fig:human-vs-ferret}
+{\bf (A)} We selected the sites most highly targeted by the human sera ``2010-age-21", sites 144, 159, 193, and 222. The selected sites are colored in the site dot plot, highlighted on the protein structure, and the full mutation-level information is shown in the logoplot.
+{\bf (B)} We changed the \textit{condition} dataset from the human sera ``2010-age-21" to the ferret sera ``ferret-Pitt-1-postinf".
+The sites selected in (A) remain selected in (B).
+}
+\end{figure}
