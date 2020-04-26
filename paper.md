@@ -41,26 +41,23 @@ bibliography: paper.bib
 
 # Summary and Purpose
 
-One challenge when studying proteins is that the effect of amino-acid changes are idiosyncratic across the length of the gene [@echave2016causes].
-However, recent technological developments in the form of a high-throughput functional assay called Deep Mutational Scanning (DMS) [@fowler2014deep], make it possible to experimentally measure the effect of all amino-acid mutations to a protein.
-Over the past five years, this flexible assay has been used to study dozens of different proteins [@esposito2019mavedb] and answer a variety of research questions.
-For example, DMS approaches have been used for protein engineering [@wrenbeck2017deep], understanding the human immune response to viruses [@lee2019mapping], and to potentially interpret human variation in a clinical setting [@starita2017variant; @gelman2019recommendations].
-Accompanying this proliferation of DMS studies has been the development of software tools [@bloom2015software; @rubin2017statistical] and databases [@esposito2019mavedb] to standardize DMS analysis and facilitate data sharing.
-However, the power of a DMS study is only fully leveraged when the experimental results are summarized, integrated, and visualized with other data, such the 3-D protein structure and natural sequence data.
+The high-throughput technique of deep mutational scanning (DMS) has recently made it possible to experimentally measure the effects of all amino-acid mutations to a protein [@fowler2014deep].
+Over the past five years, this technique has been used to study dozens of different proteins [@esposito2019mavedb] and answer a variety of research questions.
+For example, DMS has been used for protein engineering [@wrenbeck2017deep], understanding the human immune response to viruses [@lee2019mapping], and interpreting human variation in a clinical setting [@starita2017variant; @gelman2019recommendations].
+Accompanying this proliferation of DMS studies has been the development of software tools [@bloom2015software; @rubin2017statistical] and databases [@esposito2019mavedb] for data analysis and sharing.
+However, for some purposes it is important to also integrate and visualize the DMS data in the context of other information, such as the 3-D protein structure or natural sequence-variation data.
 
-Here we describe *dms-view* (https://dms-view.github.io/), a flexible, web-based, interactive visualization tool for deep mutational scanning experiments written in JavaScript and [D3](https://d3js.org).
-*dms-view* links site-level and mutation-level results from a DMS to a 3-D protein structure.
-The user can interactively select sites of interest to reveal the mutation-level details and view the sites on the protein structure.
-*dms-view* tracks both the input data information and the user selections in the URL.
-This allows the user to save their selections or send a specific view to collaborator.
-Importantly, *dms-view* is designed with a flexible input data file so the user can display custom site- and mutation-level metrics and incorporate non-DMS data, such amino-acid frequencies in nature.
+Here we describe *dms-view* (https://dms-view.github.io/), a flexible, web-based, interactive visualization tool for DMS data.
+*dms-view* is written in JavaScript and [D3](https://d3js.org), and links site-level and mutation-level DMS data to a 3-D protein structure.
+The user can interactively select sites of interest to examine the DMS measurements in the context of the protein structure.
+*dms-view* tracks the input data and user selections in the URL, making it possible to save specific views of interactively generated visualizations to share with collaborators.
+Importantly, *dms-view* takes a flexible input data file so users can easily visualize their own DMS data in the context of protein structures of their choosing, and also incorporate additional information such amino-acid frequencies in natural alignments.
 
 Users can access *dms-view* at https://dms-view.github.io.
 The tool consists of a data section at the top and a description section at the bottom.
-The data section displays the user specified data in three panels: the site plot panel, the mutation plot panel, and the protein structure panel (\autoref{fig:fig}A).
-When sites are selected in the site plot panel, the individual mutation values are shown in the mutation plot panel below and highlighted on the protein structure to the right.
-The description section is at the bottom of the page.
-The user can use this section to explain the experimental setup, acknowledge data sources, hold notes about a particular analysis or another relevant information.
+The data section displays the user-specified data in three panels: the site-plot panel, the mutation-plot panel, and the protein-structure panel (\autoref{fig:fig}A).
+When sites are selected in the site-plot panel, the individual mutation values are shown in the mutation-plot panel and highlighted on the protein structure.
+The description section is at the bottom of the page, and allows the user to add arbitrary notes that explain the experimental setup, acknowledge data sources, or provide other relevant information.
 
 Please visit the documentation at https://dms-view.githubio/docs to learn more about how to use the tool, how to upload a new dataset, or view case studies.
 
@@ -68,16 +65,16 @@ Please visit the documentation at https://dms-view.githubio/docs to learn more a
 
 ## Mapping influenza A virus escape from human sera
 
-Using a deep mutational scanning approach, @lee2019mapping measured the ability of every single amino-acid mutation in the Influenza Virus surface protein hemagglutinin to escape human sera.
+Using a DMS approach, @lee2019mapping measured the ability of every single amino-acid mutation in the influenza virus surface protein hemagglutinin to escape neutralization by human sera.
 For more information on the experimental setup, see the paper [@lee2019mapping] or the [GitHub repo](https://github.com/jbloomlab/map_flu_serum_Perth2009_H3_HA).
 
-In this example, the conditions are the different human or ferret sera used for the selections.
-The site- and mutation-level metrics are different summaries of [differential selection](https://jbloomlab.github.io/dms_tools2/diffsel.html), where higher values indicate more escape from the sera.
+In the *dms-view* visualization of these data, the conditions are the different human or ferret sera used for the selections.
+The site- and mutation-level metrics are different [summary statistics](https://jbloomlab.github.io/dms_tools2/diffsel.html) measuring the extent that mutations escape from immune pressure.
 
 Lee and colleagues asked two questions in their paper which can be easily explored using *dms-view*.
 
   1. Are the same sites selected by sera from different people? (compare site-level and mutation-level metric values for specific sites between different conditions)
-  1. Where on the protein structure are the highly selected sites located? (view sites on the protein structure)
+  2. Where on the protein structure are the highly selected sites located? (view sites on the protein structure)
 
 ### Comparing site-level and mutation-level metric values for specific sites between conditions
 
@@ -92,7 +89,7 @@ These data are the default data for *dms-view*, so to explore this question in m
 
 To address where on the protein structure the targeted sites are located, we selected the most highly targeted sites (144, 159, 193, and 222) for the human sera condition "Age 21 2010" to highlight them on the protein structure.
 
-In \autoref{fig:fig}A, we can see that these sites cluster on the "head" of the hemagglutinin, which is known to be a common target of the human immune system (cite).
+In \autoref{fig:fig}A, we can see that these sites cluster on the "head" of the hemagglutinin, which is known to be a common target of the human immune system (@chambers2015identification).
 
 # Code Availability
 
@@ -108,6 +105,7 @@ In \autoref{fig:fig}A, we can see that these sites cluster on the "head" of the 
 
 This work started as the final project for UW class CSE 512 Data Visualization as a part of the UW eScience Advanced Data Science Option curriculum and we would like to thank Dr. Jeffrey Heer, Halden Lin, and Jane Hoffswell for their input on the initial design.
 Thank you to Bloom and Bedford lab members for their generosity providing feedback, data, and time for testing.
+This work was supported in part by the following grants of the NIAID of the NIH: R01AI127983, R01AI141707, and R01AI140891. 
 JDB is an Investigator of the Howard Hughes Medical Institute.
 
 # References
