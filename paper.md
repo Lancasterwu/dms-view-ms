@@ -82,7 +82,7 @@ To address whether or not the same sites are selected by different human sera us
 We then use the condition dropdown menu to toggle between the other sera.
 The highlighted sites remain highlighted after the condition is changed so we can easily see if the same sites are targeted in other conditions.
 
-In \autoref{fig:fig}B, we can see that three of the sites selected by the human sera "2010-age-21" are also targeted by the human sera "2009-age-53".
+In \autoref{fig:fig}B, we can see that there is no overlap of the sites selected by the human sera "2010-age-21" the human sera "2009-age-53".
 These data are the default data for *dms-view*, so to explore this question in more detail please see https://dms-view.github.io.
 
 ### View sites on the protein structure
@@ -99,13 +99,13 @@ In \autoref{fig:fig}A, we can see that these sites cluster on the "head" of the 
 
 # Figures
 
-![Using *dms-view* to analyze a real DMS. **(A)** The *dms-view* data section has three panels: the site plot, the mutation plot, and the protein structure plot. The interactive features for selecting sites and navigating are in the site plot panel. Here we show the five most highly targeted sites by the human sera "2010-Age-21" from the study by @lee2019mapping. All five sites fall on the ``head" influenza virus HA. **(B)** The same five sites targeted by the sera in panel **A** but now plotted with the data from a different human sera, "2009-age-53". Using *dms-view* to compare, we see that different sites on HA are targeted by the different sera. \label{fig:fig}](fig/fig.png)
+![Using *dms-view* to analyze a real DMS. For further exploration of this dataset, please visit https://dms-view.github.io. **(A)** The *dms-view* data section has three panels: the site plot, the mutation plot, and the protein structure plot. The interactive features for selecting sites and navigating are in the site plot panel. Here we show the five most highly targeted sites by the human sera "2010-Age-21" from the study by @lee2019mapping. All five sites fall on the ``head" influenza virus HA. **(B)** The same five sites targeted by the sera in panel **A** but now plotted with the data from a different human sera, "2009-age-53". Using *dms-view* to compare, we see that different sites on HA are targeted by the different sera. \label{fig:fig}](fig/fig.png)
 
 # Acknowledgements
 
 This work started as the final project for UW class CSE 512 Data Visualization as a part of the UW eScience Advanced Data Science Option curriculum and we would like to thank Dr. Jeffrey Heer, Halden Lin, and Jane Hoffswell for their input on the initial design.
 Thank you to Bloom and Bedford lab members for their generosity providing feedback, data, and time for testing.
-This work was supported in part by the following grants of the NIAID of the NIH: R01AI127983, R01AI141707, and R01AI140891. 
+This work was supported in part by the following grants of the NIAID of the NIH: R01AI127983, R01AI141707, and R01AI140891.
 JDB is an Investigator of the Howard Hughes Medical Institute.
 
 # References
