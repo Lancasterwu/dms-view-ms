@@ -15,7 +15,7 @@ authors:
     affiliation: "3, 5"
   - name: Khrystyna North
     affiliation: "1, 2"
-  - name: Adam Dingens
+  - name: Adam S. Dingens
     affiliation: 1
   - name: Trevor Bedford
     affiliation: 3
@@ -45,18 +45,19 @@ The high-throughput technique of deep mutational scanning (DMS) has recently mad
 Over the past five years, this technique has been used to study dozens of different proteins [@esposito2019mavedb] and answer a variety of research questions.
 For example, DMS has been used for protein engineering [@wrenbeck2017deep], understanding the human immune response to viruses [@lee2019mapping], and interpreting human variation in a clinical setting [@starita2017variant; @gelman2019recommendations].
 Accompanying this proliferation of DMS studies has been the development of software tools [@bloom2015software; @rubin2017statistical] and databases [@esposito2019mavedb] for data analysis and sharing.
-However, for some purposes it is important to also integrate and visualize the DMS data in the context of other information, such as the 3-D protein structure or natural sequence-variation data.
+However, for many purposes it is important to also integrate and visualize the DMS data in the context of other information, such as the 3-D protein structure or natural sequence-variation data.
 
 Here we describe *dms-view* (https://dms-view.github.io/), a flexible, web-based, interactive visualization tool for DMS data.
 *dms-view* is written in JavaScript and [D3](https://d3js.org), and links site-level and mutation-level DMS data to a 3-D protein structure.
 The user can interactively select sites of interest to examine the DMS measurements in the context of the protein structure.
-*dms-view* tracks the input data and user selections in the URL, making it possible to save specific views of interactively generated visualizations to share with collaborators.
+*dms-view* tracks the input data and user selections in the URL, making it possible to save specific views of interactively generated visualizations to share with collaborators or to support a published study.
 Importantly, *dms-view* takes a flexible input data file so users can easily visualize their own DMS data in the context of protein structures of their choosing, and also incorporate additional information such amino-acid frequencies in natural alignments.
 
 Users can access *dms-view* at https://dms-view.github.io.
 The tool consists of a data section at the top and a description section at the bottom.
 The data section displays the user-specified data in three panels: the site-plot panel, the mutation-plot panel, and the protein-structure panel (\autoref{fig:fig}A).
 When sites are selected in the site-plot panel, the individual mutation values are shown in the mutation-plot panel and highlighted on the protein structure.
+The user can toggle between site- and mutation-level metrics, which are defined in the user-generated input file.
 The description section is at the bottom of the page, and allows the user to add arbitrary notes that explain the experimental setup, acknowledge data sources, or provide other relevant information.
 
 Please visit the documentation at https://dms-view.githubio/docs to learn more about how to use the tool, how to upload a new dataset, or view case studies.
@@ -68,13 +69,15 @@ Please visit the documentation at https://dms-view.githubio/docs to learn more a
 Using a DMS approach, @lee2019mapping measured the ability of every single amino-acid mutation in the influenza virus surface protein hemagglutinin to escape neutralization by human sera.
 For more information on the experimental setup, see the paper [@lee2019mapping] or the [GitHub repo](https://github.com/jbloomlab/map_flu_serum_Perth2009_H3_HA).
 
+We visualized the @lee2019mapping serum mapping data using *dms-view*.
+To explore this dataset, please visit https://dms-view.github.io.
 In the *dms-view* visualization of these data, the conditions are the different human or ferret sera used for the selections.
 The site- and mutation-level metrics are different [summary statistics](https://jbloomlab.github.io/dms_tools2/diffsel.html) measuring the extent that mutations escape from immune pressure.
 
 Lee and colleagues asked two questions in their paper which can be easily explored using *dms-view*.
 
-  1. Are the same sites selected by sera from different people? (compare site-level and mutation-level metric values for specific sites between different conditions)
-  2. Where on the protein structure are the highly selected sites located? (view sites on the protein structure)
+  1. *Are the same sites selected by sera from different people?* To explore this question, we compared the site-level and mutation-level metric values for a specific set of sites between different conditions.
+  2. *Where on the protein structure are the highly selected sites located?* To explore this question, we selected specific sites of interest to be visualized on the 3-D protein structure
 
 ### Comparing site-level and mutation-level metric values for specific sites between conditions
 
@@ -99,7 +102,7 @@ In \autoref{fig:fig}A, we can see that these sites cluster on the "head" of the 
 
 # Figures
 
-![Using *dms-view* to analyze a real DMS. For further exploration of this dataset, please visit https://dms-view.github.io. **(A)** The *dms-view* data section has three panels: the site plot, the mutation plot, and the protein structure plot. The interactive features for selecting sites and navigating are in the site plot panel. Here we show the five most highly targeted sites by the human sera "2010-Age-21" from the study by @lee2019mapping. All five sites fall on the ``head" influenza virus HA. **(B)** The same five sites targeted by the sera in panel **A** but now plotted with the data from a different human sera, "2009-age-53". Using *dms-view* to compare, we see that different sites on HA are targeted by the different sera. \label{fig:fig}](fig/fig.png)
+![Using *dms-view* to analyze a DMS. For further exploration of this dataset, please visit https://dms-view.github.io. **(A)** The *dms-view* data section has three panels: the site plot, the mutation plot, and the protein structure plot. The interactive features for selecting sites and navigating are in the site plot panel. Here we show the five most highly targeted sites by the human sera "2010-Age-21" from the study by @lee2019mapping. All five sites fall in the ``globular head" of influenza virus HA. **(B)** The same five sites targeted by the sera in panel **A** but now plotted with the data from a different human sera, "2009-age-53". Using *dms-view* to compare, we see that different sites on HA are targeted by the different sera. \label{fig:fig}](fig/fig.png)
 
 # Acknowledgements
 
