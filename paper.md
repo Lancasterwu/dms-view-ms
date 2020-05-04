@@ -9,6 +9,7 @@ tags:
 authors:
   - name: Sarah K. Hilton*
     affiliation: "1, 2"
+    orcid: 0000-0001-9278-3644
   - name: John Huddleston*
     affiliation: "3, 4"
   - name: Allison Black
@@ -17,6 +18,7 @@ authors:
     affiliation: "1, 2"
   - name: Adam S. Dingens
     affiliation: 1
+    orcid: 0000-0001-9603-9409
   - name: Trevor Bedford
     affiliation: 3
   - name: Jesse D. Bloom
