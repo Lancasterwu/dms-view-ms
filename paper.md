@@ -6,12 +6,21 @@ tags:
   - molecular biology
   - protein evolution
   - data visualization
+author:
+  - Sarah K. Hilton*
+  - John Huddleston*
+  - Allison Black
+  - Khrystyna North
+  - Adam S. Dingens
+  - Trevor Bedford
+  - Jesse D. Bloom
 authors:
   - name: Sarah K. Hilton*
     affiliation: "1, 2"
     orcid: 0000-0001-9278-3644
   - name: John Huddleston*
     affiliation: "3, 4"
+    orcid: 0000-0002-4250-2063
   - name: Allison Black
     affiliation: "3, 5"
   - name: Khrystyna North
