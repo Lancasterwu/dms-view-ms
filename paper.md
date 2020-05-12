@@ -115,7 +115,7 @@ In \autoref{fig:fig}A, we can see that these sites cluster on the "head" of the 
 
 # Figures
 
-![Using *dms-view* to analyze a DMS. For further exploration of this dataset, please visit https://dms-view.github.io. **(A)** The *dms-view* data section has three panels: the site plot, the mutation plot, and the protein structure plot. The interactive features for selecting sites and navigating are in the site plot panel. Here we show the five most highly targeted sites by the human sera "2010-Age-21" from the study by @lee2019mapping. All five sites fall in the ``globular head" of influenza virus HA. **(B)** The same five sites targeted by the sera in panel **A** but now plotted with the data from a different human sera, "2009-age-53". Using *dms-view* to compare, we see that different sites on HA are targeted by the different sera. \label{fig:fig}](fig/fig.png)
+![Using *dms-view* to analyze a DMS. For further exploration of this dataset, please visit https://dms-view.github.io. **(A)** The *dms-view* data section has three panels: the site plot, the mutation plot, and the protein structure plot. The interactive features for selecting sites and navigating are in the site plot panel. Here we show the five most highly targeted sites by the human sera "2010-Age-21" from the study by @lee2019mapping. All five sites fall in the ``globular head" of influenza virus HA. **(B)** The same five sites targeted by the sera in panel **A** but now plotted with the data from a different human sera, "2009-age-53". Using *dms-view* to compare, we see that different sites on HA are targeted by the different sera. \label{fig:fig}](fig/fig.pdf)
 
 # Acknowledgements
 
