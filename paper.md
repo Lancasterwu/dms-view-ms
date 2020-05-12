@@ -122,6 +122,7 @@ In \autoref{fig:fig}A, we can see that these sites cluster on the "head" of the 
 This work started as the final project for UW class CSE 512 Data Visualization as a part of the UW eScience Advanced Data Science Option curriculum and we would like to thank Dr. Jeffrey Heer, Halden Lin, and Jane Hoffswell for their input on the initial design.
 Thank you to Bloom and Bedford lab members for their generosity providing feedback, data, and time for testing.
 This work was supported in part by the following grants of the NIAID of the NIH: F31AI140714, R01AI127983, R01AI141707, and R01AI140891.
+AB is supported by the National Science Foundation Graduate Research Fellowship Program under Grant No. DGE-1256082.
 TB is a Pew Biomedical Scholar and is supported by the additional NIH grants NIGMS R35 GM119774-01 and NIAID U19 AI117891-01.
 JDB is an Investigator of the Howard Hughes Medical Institute.
 
