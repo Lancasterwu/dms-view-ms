@@ -23,6 +23,7 @@ authors:
     orcid: 0000-0002-4250-2063
   - name: Allison Black
     affiliation: "3, 5"
+    orcid: 0000-0002-6618-4127
   - name: Khrystyna North
     affiliation: "1, 2"
   - name: Adam S. Dingens
@@ -30,9 +31,10 @@ authors:
     orcid: 0000-0001-9603-9409
   - name: Trevor Bedford
     affiliation: 3
+    orcid: 0000-0002-4039-5794
   - name: Jesse D. Bloom
-    orcid: 0000-0003-1267-3408
     affiliation: "1, 2, 6"
+    orcid: 0000-0003-1267-3408
 affiliations:
   - name: Division of Basic Sciences and Computational Biology Program, Fred Hutchinson Cancer Research Center, Seattle, WA, USA
     index: 1
@@ -119,7 +121,7 @@ In \autoref{fig:fig}A, we can see that these sites cluster on the "head" of the 
 
 This work started as the final project for UW class CSE 512 Data Visualization as a part of the UW eScience Advanced Data Science Option curriculum and we would like to thank Dr. Jeffrey Heer, Halden Lin, and Jane Hoffswell for their input on the initial design.
 Thank you to Bloom and Bedford lab members for their generosity providing feedback, data, and time for testing.
-This work was supported in part by the following grants of the NIAID of the NIH: R01AI127983, R01AI141707, and R01AI140891.
+This work was supported in part by the following grants of the NIAID of the NIH: F31AI140714, R01AI127983, R01AI141707, and R01AI140891.
 JDB is an Investigator of the Howard Hughes Medical Institute.
 
 # References
