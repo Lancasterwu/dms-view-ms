@@ -273,6 +273,14 @@ $else$
 $endif$
 $endif$
 $if(graphics)$
+\usepackage{float}
+\let\origfigure\figure
+\let\endorigfigure\endfigure
+\renewenvironment{figure}[1][2] {
+    \expandafter\origfigure\expandafter[H]
+} {
+    \endorigfigure
+}
 \usepackage{graphicx}
 \makeatletter
 \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
@@ -284,7 +292,7 @@ $if(graphics)$
 \setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
 % Set default figure placement to htbp
 \makeatletter
-\def\fps@figure{htbp}
+\def\fps@figure{H}
 \makeatother
 $endif$
 $if(links-as-notes)$
@@ -386,8 +394,31 @@ $else$
 $endif$
 \subtitle{$subtitle$}
 $endif$
-\author{$for(author)$$author$$sep$ \and $endfor$}
-\date{$date$}
+
+\usepackage{authblk}
+\renewcommand\Authfont{\normalsize \bf}
+\renewcommand\Affilfont{\small \normalfont}
+\makeatletter
+\renewcommand\AB@affilsepx{, \protect\Affilfont}
+\makeatother
+
+$if(authors)$
+  $for(authors)$
+  $if(authors.affiliation)$
+    \author[$authors.affiliation$]{$authors.name$}
+  $else$
+    \author{$authors.name$}
+  $endif$
+  $endfor$
+$endif$
+
+$if(affiliations)$
+  $for(affiliations)$
+    \affil[$affiliations.index$]{$affiliations.name$}
+  $endfor$
+$endif$
+\date{\vspace{-5ex}}
+
 $if(beamer)$
 $if(institute)$
 \institute{$for(institute)$$institute$$sep$ \and $endfor$}

@@ -1,19 +1,12 @@
 ---
 title: '*dms-view*: Interactive visualization tool for deep mutational scanning experiments'
+papersize: a4
 tags:
   - Javascript
   - D3
   - molecular biology
   - protein evolution
   - data visualization
-author:
-  - Sarah K. Hilton*
-  - John Huddleston*
-  - Allison Black
-  - Khrystyna North
-  - Adam S. Dingens
-  - Trevor Bedford
-  - Jesse D. Bloom
 authors:
   - name: Sarah K. Hilton*
     affiliation: "1, 2"
