@@ -1,5 +1,6 @@
 ---
 title: '*dms-view*: Interactive visualization tool for deep mutational scanning experiments'
+repository: https://github.com/dms-view/dms-view.github.io
 tags:
   - Javascript
   - D3
