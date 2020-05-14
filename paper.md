@@ -1,5 +1,5 @@
 ---
-title: '*dms-view*: Interactive visualization tool for deep mutational scanning experiments'
+title: '*dms-view*: Interactive visualization tool for deep mutational scanning data'
 papersize: a4
 tags:
   - Javascript
@@ -66,18 +66,18 @@ When sites are selected in the site-plot panel, the individual mutation values a
 The user can toggle between site- and mutation-level metrics, which are defined in the user-generated input file.
 The description section is at the bottom of the page, and allows the user to add arbitrary notes that explain the experimental setup, acknowledge data sources, or provide other relevant information.
 
-Please visit the documentation at https://dms-view.githubio/docs to learn more about how to use the tool, how to upload a new dataset, or view case studies.
+Please visit the documentation at https://dms-view.github.io/docs to learn more about how to use the tool, how to upload a new dataset, or view case studies.
 
 # Example
 
 ## Mapping influenza A virus escape from human sera
 
-Using a DMS approach, @lee2019mapping measured the ability of every single amino-acid mutation in the influenza virus surface protein hemagglutinin to escape neutralization by human sera.
+Using a DMS approach, @lee2019mapping measured how all amino-acid mutations to the influenza virus surface-protein hemagglutinin (HA) affected viral neutralization by human sera.
 For more information on the experimental setup, see the paper [@lee2019mapping] or the [GitHub repo](https://github.com/jbloomlab/map_flu_serum_Perth2009_H3_HA).
 
 We visualized the @lee2019mapping serum mapping data using *dms-view*.
 To explore this dataset, please visit https://dms-view.github.io.
-In the *dms-view* visualization of these data, the conditions are the different human or ferret sera used for the selections.
+In the *dms-view* visualization of these data, the conditions are the different human sera used for the selections.
 The site- and mutation-level metrics are different [summary statistics](https://jbloomlab.github.io/dms_tools2/diffsel.html) measuring the extent that mutations escape from immune pressure.
 
 Lee and colleagues asked two questions in their paper which can be easily explored using *dms-view*.
@@ -87,8 +87,8 @@ Lee and colleagues asked two questions in their paper which can be easily explor
 
 ### Comparing site-level and mutation-level metric values for specific sites between conditions
 
-To address whether or not the same sites are selected by different human sera using *dms-view*, we selected the mostly highly targeted sites for the human sera condition "Age 21 2010" \autoref{fig:fig}A (144, 159, 193, and 222).
-We then use the condition dropdown menu to toggle between the other sera.
+To address whether or not the same sites are selected by different human sera using *dms-view*, we highlighted the most highly targeted sites for the human sera condition "Age 21 2010" \autoref{fig:fig}A (144, 159, 193, 222, and 244).
+We then used the condition dropdown menu to toggle to the other sera.
 The highlighted sites remain highlighted after the condition is changed so we can easily see if the same sites are targeted in other conditions.
 
 In \autoref{fig:fig}B, we can see that there is no overlap of the sites selected by the human sera "2010-age-21" the human sera "2009-age-53".
@@ -98,7 +98,7 @@ These data are the default data for *dms-view*, so to explore this question in m
 
 To address where on the protein structure the targeted sites are located, we selected the most highly targeted sites (144, 159, 193, and 222) for the human sera condition "Age 21 2010" to highlight them on the protein structure.
 
-In \autoref{fig:fig}A, we can see that these sites cluster on the "head" of the hemagglutinin, which is known to be a common target of the human immune system (@chambers2015identification).
+In \autoref{fig:fig}A, we can see that these sites cluster on the "head" of HA, which is known to be a common target of the human immune system (@chambers2015identification).
 
 # Code Availability
 
@@ -108,7 +108,7 @@ In \autoref{fig:fig}A, we can see that these sites cluster on the "head" of the 
 
 # Figures
 
-![Using *dms-view* to analyze a DMS. For further exploration of this dataset, please visit https://dms-view.github.io. **(A)** The *dms-view* data section has three panels: the site plot, the mutation plot, and the protein structure plot. The interactive features for selecting sites and navigating are in the site plot panel. Here we show the five most highly targeted sites by the human sera "2010-Age-21" from the study by @lee2019mapping. All five sites fall in the ``globular head" of influenza virus HA. **(B)** The same five sites targeted by the sera in panel **A** but now plotted with the data from a different human sera, "2009-age-53". Using *dms-view* to compare, we see that different sites on HA are targeted by the different sera. \label{fig:fig}](fig/fig.pdf)
+![Using *dms-view* to analyze DMS data. For further exploration, please visit https://dms-view.github.io. **(A)** The *dms-view* data section has three panels: the site plot, the mutation plot, and the protein structure plot. The interactive features for selecting sites and navigating are in the site plot panel. Here we show the five sites most highly targeted by human serum "2010-Age-21" from the study by @lee2019mapping. All five sites fall in the ``globular head" of influenza virus HA. **(B)** The same five sites as in panel **A** but now plotted with the data from a different human serum, "2009-age-53". Using *dms-view* to compare, we see that different sites on HA are targeted by different sera. \label{fig:fig}](fig/fig.pdf)
 
 # Acknowledgements
 
